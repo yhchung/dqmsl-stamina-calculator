@@ -22,9 +22,22 @@ neededMinutes = neededTime % 60
 print "---"
 print str(neededHours) + " Hours " + str(neededMinutes) + " Minutes needed for " + str(neededStamina) + " stamina"
 
-# you can use XX stamina now
+# you can reach the needed stamina at 
 now = datetime.datetime.now()
 datetime.time(now.hour, now.minute)
+
+targetHour = now.hour + neededHours
+targetMinute = now.minute + neededMinutes
+
+if targetMinute >= 60 :
+	targetMinute -= 60
+	targetHour += 1
+
+
+print "you can read the needed stamina at " + str(targetHour) + ":" + str(targetMinute)
+
+
+# you can use XX stamina now
 
 eventTimeMinutes = eventTime * 60
 currentTime = now.hour * 60 + now.minute
