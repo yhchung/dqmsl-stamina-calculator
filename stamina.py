@@ -42,11 +42,11 @@ if extraStamina > 0 :
 else :
 	print "you can't use stamina now"
 
-
+"""
 print "eventTimeMinutes: " + str(eventTimeMinutes)
 print "currentTime: " + str(currentTime)
 print "remainingTime: " + str(remainingTime)
 print "extraStamina: " + str(extraStamina)
-
+"""
 
 
