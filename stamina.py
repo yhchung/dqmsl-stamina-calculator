@@ -35,12 +35,18 @@ print "you can read the needed stamina at " + str(endTime.hour) + ":" + str(endT
 eventTimeMinutes = eventTime * 60
 currentTime = now.hour * 60 + now.minute
 remainingTime = eventTimeMinutes - currentTime # minutes
-extraStamina = currentStamina + int(remainingTime/10) - maxStamina
+extraStamina = currentStamina + int(remainingTime/minutePerStamina) - neededStamina
 
 if extraStamina > 0 : 
 	print "you can use " + str(extraStamina) + " stamina now"
 else :
 	print "you can't use stamina now"
+
+
+print "eventTimeMinutes: " + str(eventTimeMinutes)
+print "currentTime: " + str(currentTime)
+print "remainingTime: " + str(remainingTime)
+print "extraStamina: " + str(extraStamina)
 
 
 
