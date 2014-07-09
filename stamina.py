@@ -38,7 +38,8 @@ remainingTime = eventTimeMinutes - currentTime # minutes
 extraStamina = currentStamina + int(remainingTime/minutePerStamina) - neededStamina
 
 if extraStamina > 0 : 
-	print "you can use " + str(extraStamina) + " stamina now"
+	print "you can use " + str(extraStamina) + " stamina now, down to " \
+			+ str(currentStamina - extraStamina)
 else :
 	print "you can't use stamina now"
 
